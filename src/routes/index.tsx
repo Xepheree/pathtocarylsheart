@@ -7,7 +7,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Patrick & Caryl · September 14, 2025" },
-      { name: "description", content: "Patrick and Caryl are getting married. RSVP, schedule, and travel details for our wedding day." },
+      {
+        name: "description",
+        content:
+          "Patrick and Caryl are getting married. RSVP, schedule, and travel details for our wedding day.",
+      },
       { property: "og:title", content: "Patrick & Caryl · September 14, 2025" },
       { property: "og:description", content: "Join us as we say I do." },
     ],
@@ -36,15 +40,22 @@ function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
-        <a href="#top" className="font-serif italic text-lg tracking-wide">P &amp; C</a>
+        <a href="#top" className="font-serif italic text-lg tracking-wide">
+          P &amp; C
+        </a>
         <ul className="hidden md:flex gap-10 text-xs uppercase tracking-[0.28em]">
           {links.map(([label, href]) => (
             <li key={href}>
-              <a href={href} className="hover:text-accent transition-colors">{label}</a>
+              <a href={href} className="hover:text-accent transition-colors">
+                {label}
+              </a>
             </li>
           ))}
         </ul>
-        <a href="#rsvp" className="text-xs uppercase tracking-[0.28em] border-b border-foreground pb-1 hover:text-accent hover:border-accent transition-colors">
+        <a
+          href="#rsvp"
+          className="text-xs uppercase tracking-[0.28em] border-b border-foreground pb-1 hover:text-accent hover:border-accent transition-colors"
+        >
           RSVP
         </a>
       </div>
@@ -54,7 +65,10 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <img
         src={heroImg}
         alt=""
@@ -67,7 +81,9 @@ function Hero() {
         <p className="eyebrow text-primary-foreground/90 mb-8">Together with their families</p>
         <h1 className="font-serif text-primary-foreground text-7xl sm:text-8xl md:text-[10rem] leading-[0.95] tracking-tight">
           Patrick
-          <span className="block italic font-light text-5xl sm:text-6xl md:text-7xl my-4 md:my-6 text-primary-foreground/90">&amp;</span>
+          <span className="block italic font-light text-5xl sm:text-6xl md:text-7xl my-4 md:my-6 text-primary-foreground/90">
+            &amp;
+          </span>
           Caryl
         </h1>
         <div className="mt-10 flex items-center justify-center gap-4 text-primary-foreground/90 text-sm tracking-[0.32em] uppercase">
@@ -75,9 +91,14 @@ function Hero() {
           <span>Sept 14 · 2025</span>
           <span className="hairline" />
         </div>
-        <p className="mt-4 text-primary-foreground/80 font-serif italic text-lg">Hudson Valley, New York</p>
+        <p className="mt-4 text-primary-foreground/80 font-serif italic text-lg">
+          Hudson Valley, New York
+        </p>
       </div>
-      <a href="#story" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/80 text-[10px] uppercase tracking-[0.4em] z-10">
+      <a
+        href="#story"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/80 text-[10px] uppercase tracking-[0.4em] z-10"
+      >
         Scroll
       </a>
     </section>
@@ -98,7 +119,9 @@ function Countdown() {
         <div className="grid grid-cols-3 gap-6 md:gap-16">
           {items.map(([n, label]) => (
             <div key={label}>
-              <div className="font-serif text-5xl md:text-7xl text-foreground">{String(n).padStart(2, "0")}</div>
+              <div className="font-serif text-5xl md:text-7xl text-foreground">
+                {String(n).padStart(2, "0")}
+              </div>
               <div className="eyebrow mt-3">{label}</div>
             </div>
           ))}
@@ -119,13 +142,12 @@ function Story() {
           </h2>
           <div className="space-y-5 text-foreground/80 leading-relaxed max-w-md">
             <p>
-              We met seven Octobers ago, both reaching for the last almond croissant.
-              Patrick offered it to Caryl. Caryl offered to split it. We sat by the window
-              and talked until the rain stopped.
+              Test, both reaching for the last almond croissant. Patrick offered it to Caryl. Caryl
+              offered to split it. We sat by the window and talked until the rain stopped.
             </p>
             <p>
-              Since then we've moved twice, adopted a stubborn rescue terrier named Olive,
-              and learned that the best decisions are usually the slowest ones.
+              Since then we've moved twice, adopted a stubborn rescue terrier named Olive, and
+              learned that the best decisions are usually the slowest ones.
             </p>
             <p className="font-serif italic text-lg text-foreground">
               And now, with the people we love most, we're making the next one.
@@ -152,9 +174,24 @@ function Story() {
 
 function Details() {
   const items = [
-    { label: "The Ceremony", time: "4:00 PM", place: "Stone Chapel at Willow Ridge", detail: "412 Orchard Lane, Rhinebeck, NY" },
-    { label: "The Reception", time: "6:00 PM", place: "The Glasshouse Pavilion", detail: "Dinner, dancing, and a few surprises" },
-    { label: "Dress Code", time: "Garden Formal", place: "Soft tones, comfortable shoes", detail: "The grounds are grass — wedges welcome" },
+    {
+      label: "The Ceremony",
+      time: "4:00 PM",
+      place: "Stone Chapel at Willow Ridge",
+      detail: "412 Orchard Lane, Rhinebeck, NY",
+    },
+    {
+      label: "The Reception",
+      time: "6:00 PM",
+      place: "The Glasshouse Pavilion",
+      detail: "Dinner, dancing, and a few surprises",
+    },
+    {
+      label: "Dress Code",
+      time: "Garden Formal",
+      place: "Soft tones, comfortable shoes",
+      detail: "The grounds are grass — wedges welcome",
+    },
   ];
   return (
     <section id="details" className="py-28 md:py-40 bg-secondary/40">
@@ -196,7 +233,10 @@ function Schedule() {
         </div>
         <ol className="relative">
           {events.map(([time, title, sub], i) => (
-            <li key={i} className="grid grid-cols-[5rem_1fr] gap-8 py-7 border-b border-border last:border-b-0">
+            <li
+              key={i}
+              className="grid grid-cols-[5rem_1fr] gap-8 py-7 border-b border-border last:border-b-0"
+            >
               <div className="font-serif text-2xl text-accent">{time}</div>
               <div>
                 <div className="font-medium text-foreground">{title}</div>
@@ -269,7 +309,15 @@ function RSVP() {
             {attending === "yes" && (
               <>
                 <Field label="Number of guests (including you)">
-                  <input required type="number" min={1} max={4} defaultValue={1} name="guests" className="rsvp-input" />
+                  <input
+                    required
+                    type="number"
+                    min={1}
+                    max={4}
+                    defaultValue={1}
+                    name="guests"
+                    className="rsvp-input"
+                  />
                 </Field>
                 <Field label="Dietary restrictions or notes">
                   <textarea name="notes" rows={3} className="rsvp-input resize-none" />
@@ -324,7 +372,10 @@ function Footer() {
       <p className="font-serif italic text-2xl mb-3">Patrick &amp; Caryl</p>
       <p className="eyebrow">September 14 · 2025 · Hudson Valley</p>
       <p className="mt-8 text-xs text-muted-foreground">
-        Questions? Reach us at <a href="mailto:hello@patrickandcaryl.com" className="underline hover:text-accent">hello@patrickandcaryl.com</a>
+        Questions? Reach us at{" "}
+        <a href="mailto:hello@patrickandcaryl.com" className="underline hover:text-accent">
+          hello@patrickandcaryl.com
+        </a>
       </p>
     </footer>
   );
